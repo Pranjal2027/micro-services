@@ -1,0 +1,1969 @@
+{
+	"info": {
+		"_postman_id": "0ba18dd5-038d-4d3d-a8a4-660eac7c7601",
+		"name": "Xuriti_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign up",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Krishana buyer\",\n    \"email\": \"krishna.kshirsagar@xuriti.com\",\n    \"password\": \"Krishh@123\",\n    \"mobileNumber\": \"7447649692\",\n    \"firstName\": \"Krishna\",\n    \"lastName\": \"Seller\",\n    \"status\":\"Active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Foreget password link",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"varsha.patil@xuriti.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/forgot-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sign in",
+			"item": [
+				{
+					"name": "Sign_in",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY2NTU0MjgsImV4cCI6MTY1NjY4NDIyOH0.R-DKRNYKgcT577-EDVh_KEseIcFZsWxLEbSf7mTh0nQ6ShmlQV_PakgQVl2Y7rgQf_3KSox1OVigb9nDrFDO2tN4d2-Rk0CTeidb9L0uH2fbupNQ6-qIz32dpRe3B2ugY6pIZO5iA5B0Q0Qgy-YiNiA0ffSsTDE-EE-jPuGFINs_FuQBT0ZmTEb5AgCsKFYvcFpqTVYtnXcK0ZXcoob-X0Bxf1cKX9E1yx95t55Q5rwmrOr9A5CT0otiMjVkgqIzoTd8S5jo4j6e9dxNt4latGjLDNIc-JCSKGiwbAWhUQNEkpJsKEvNkPc4bHGPrHYBOSjO3nfy2Bgo-02BV2B6mFMsWg0eKzDvdWgIMvd52ti1q0Owc0xrO4ppfPBQmugAKxpdLJEYWnqOWMFCiw2ySBLhN6Qq9kEIytvfSQy1jEKwjvE0yU9SniThnB6sSoJ3PMku5Q0cabJI-mvuz_kHlfC_aCPDGcB9a_WEkrlLbxwev_ruLNo6lKOERWYqSdXi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"email\":\"varsha.patil@tech-trail.com\",\n    \"password\":\"Varsha12@\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/user-login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"user-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"varsha.patil@tech-trail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/forgot-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comapany Register",
+			"item": [
+				{
+					"name": "Add company",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmMzZmU1NDcyMTJiNmM4NmQ3YTljNzMiLCJpYXQiOjE2NTcwMTYxNjUsImV4cCI6MTY1NzA0NDk2NX0.l8qCwUT-MnqyeVgUjTZLBmxBuYkAkOdhNeHktRMwUNGW8FSmgaWy9YeKOp4A8QyDBpgRGfw56Wyz4e8RcbGGuZoPJSuwZhiJAdLv9rNq7Fl9IfzGCiHDp-gUqdPDA2kvT5ZPbHbH5vn531daI8dU6YxGlizXNPJRrQ2Myle0yARGxc7iTIVCQEm9nEjV1HIEmJVmcL2ABJpaNUDSgakezro0UBE_qg9UXuV1xGKkU0bIxs0DpXSxMWKl6nHWa4A7hXiTJHY2pIoThNDHAaE_JiOsNFd3fhZWUPjnv7yNyuVgrtmxmQ945i7WtQjCNvJVEaIWQw-6DwIHzBnjxIpKp2LsxpZy8re5KrrEEyTh7yVZzmRVsnu56ipF47ec9VeJtI2M3m0fxEFbIk1yT1LucipTvBXfT85K-IpkDRekA-Et0Uf3r7pBsPWxvmeYHGoueVYl47YxUvB_GOHwQWTOTMTs9X_7ibSPFMHcDeTBAyVL41ige6PCo2uJ499iD3Hf",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmFjMWRmYzQ3OTJkMjIyZjYwMzg3ZWEiLCJpYXQiOjE2NTU0NDczMTIsImV4cCI6MTY1NTQ3NjExMn0.jjWgwLRP9lIGrOwhVFQcrsEXQFi_QLNboqOx3_sXSc7LG4o5lnc1E03p2fwdwiEjwCT76UCfCgMUojWgB1Jhp4gSLXkDQ-qcwQTTKzWtywgJWAAy7YAF3A8wPQnRZdnXg0Ja5GRQxUf7MO1Dcz1a3YpglY4tSAsuuqgDxSNDZiXx03hBlLyddEdoTTWVdOV7ywmlV7wKodnBAcj-hCgEG2DsZDLgkr2PZaQpS1HJo3qpC3-3xVE4_ip4i3eSXbQz3RNWdwffbia-UGaXgjJfh8ehJ0PXtwpR1xG3y41rn-5Ze0uOpmTsOLKpAObtkix3xB7_BmV2oDze4Su41CMfpiJtDbVa2Nivkcez60VbDbSPquDKZZMeQ2ndxvsFk4ClRk620BDsPmSOVl7YdmOxtU2rYVpcXzYBKHEmi6AULMbGqBffZKil9XbYOmkm-avUM639FDPvFXcYooJdYzn3nmNQtfm17h86IVF-G26RDVT7K0lE_5xDo7qOdYxcznB7",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"userID\":\"62c4055cd8200d1fccc01af1\",\n    \"gstin\": \"29AASFB0640H1ZD\",\n    \"companyName\": \"BANGALORE COMPANY \",\n    \"address\": \"1, Vittal Mallya Rd, KG Halli, Shanthala Nagar, Sampangi Rama Nagar, Bangalore Urban, Bengaluru,\",\n    \"district\": \"BANGALORE\",\n    \"state\": [\"Karnataka\"],\n    \"pinCode\":\"560001\",\n    \"pan\": \"AASFB0640H\",\n    \"tan\":\"04AGJOO5203Q1MO\",\n    \"cin\":\"L64200MH1986PLC020470\",\n    \"admin_mobile\":\"7058242253\",\n    \"admin_email\":\"shradhakore801@gmail.com\",\n    \"company_email\":\"cipla.secretarial@cipla.com\",\n    \"company_mobile\":\"9590386428\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entity/add-entity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"add-entity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search gst",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-length": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY5MTY1NTksImV4cCI6MTY1Njk0NTM1OX0.PQni5YRpwBN-tXDw32r2XHasjeEGgxuSdlD2_sOZcLLRkpsVmCwWuhVbCrFNlDRRKZiyZyG-IdF4_fKmNxUc5A3mUF4up0-zcHJ541FGavCNd8c90j5Wd51Gf_VAv_R3Byje5Wvq0Zlj-IrgiUmHeeUajDDT7dG48x8eOCM51OlrMnmCB-RRW6JIEwTcqT9aT2qPFZzKKx_HTjRvnbdFLcZRPkPvGplsVjZ5GXtwEGCAKZHDywDCQjOiCNKbhZRjZ5cC3NsPTnS-slJT1mkLMIRfnJfiB-KYAsZypUcJil6XdKnI8tp1yehmgQ6SVoiDoS-1_ObbK7vpFx1tKepv_jegFPHNk5v94A1lxIm_QkSQsKuyoVApyyYTwVIzoLUEp9lD8jHi2EEW7khSfLHKLr2tWxUuV0H9D7qhr9jzL8FRU40a_3jPKE9w40FmPhEFw3NXs6IJNQwiomQlBcJQBNmYHkqPZn-vCL0rPRCfZNPbmkFbpPFUp4m3tdDu3Pjl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"gstin\":\"08AAACA5603Q1ZK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entity/search-gst",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"search-gst"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmEyMjQzZjkzNjFkMjVhYmVkZGE5MzciLCJpYXQiOjE2NTU4NzY1NDAsImV4cCI6MTY1NTkwNTM0MH0.mHXKH62AFlu_8zR4irEEzkBjE5gJk1pU71PWU71uP1YhbMJVNJ7N2JWP1Muyfko738IhALK88KjZBvDPaTds-m-Oe9TqETRU-c14bFGs9MF1hjKAmB3NbpfkGn7BGEjGC3RiJYch0mah5hDKn_UKV1NX1zRa37ZBSCKeqORXMoxv9PB0QQfegyrgxXdzI8HhNCvk7IOb_N3LUmYMYSj1nZjzlYpJtKHG4V2u1g4SjZ1qJoXSaFRNdGgVTaL-jywAabQbw5R5P76w3eitf4aTLLNlOD88FVZNnlPchBIvmFW4g35g423iDNMn-bgU4eP-AS_4PD8xc3VssxSHBjK-or9w2XnHlyV8bo2EyvIeuE5dxpKW2xxsuislIiC24HE1ip4__1OnTJZPsDQyyZSVKgSxTNOSgswPtsZwMI0TbG2JXQh40v-Fw9YgLLMcTaKU5KNQIUWYqN908-nIIR3jtvfCn-tiddUQK88J2yCAqo6O_fDtx4tyBYzu5RNOIBpn",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"Approved\",\n    \"msg\":\"Your comapny approved\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entity/status-entity/62b2c1cef6f742a0414bc39b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"status-entity",
+								"62b2c1cef6f742a0414bc39b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all entities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY5MTY1NTksImV4cCI6MTY1Njk0NTM1OX0.PQni5YRpwBN-tXDw32r2XHasjeEGgxuSdlD2_sOZcLLRkpsVmCwWuhVbCrFNlDRRKZiyZyG-IdF4_fKmNxUc5A3mUF4up0-zcHJ541FGavCNd8c90j5Wd51Gf_VAv_R3Byje5Wvq0Zlj-IrgiUmHeeUajDDT7dG48x8eOCM51OlrMnmCB-RRW6JIEwTcqT9aT2qPFZzKKx_HTjRvnbdFLcZRPkPvGplsVjZ5GXtwEGCAKZHDywDCQjOiCNKbhZRjZ5cC3NsPTnS-slJT1mkLMIRfnJfiB-KYAsZypUcJil6XdKnI8tp1yehmgQ6SVoiDoS-1_ObbK7vpFx1tKepv_jegFPHNk5v94A1lxIm_QkSQsKuyoVApyyYTwVIzoLUEp9lD8jHi2EEW7khSfLHKLr2tWxUuV0H9D7qhr9jzL8FRU40a_3jPKE9w40FmPhEFw3NXs6IJNQwiomQlBcJQBNmYHkqPZn-vCL0rPRCfZNPbmkFbpPFUp4m3tdDu3Pjl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/entity/entities",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"entities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User id through get entites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjliMGJkMDg4YmYyNWViZGZkMDM1OTMiLCJpYXQiOjE2NTQ0OTI3NjYsImV4cCI6MTY1NDUyMTU2Nn0.K0fOcSs4hWu9KyPR579R1LIoTBOaq1SoUm7MXAxyYKE9rxEQQGv1VqxXgj7gJcqYsb8imHVVlOmPxULfRZgmQslkhsbwcNIzrP1yz48JJ7jPq_WRTxPqkHIYen-MyKPdwFkbqQsEiqdQOA-OfRcn5ry5j5iF9CT3k_yCMcpG6B3zVX8nd2S-JrmQFa1pO7TNgLh2npH_5PMyMhm--o1wzomosoJOJ7MnaTl3Jv8s7e5Sx5yE-PnMoshTwh-aZFgJx_rgAF-ZccbIfdOv8B8-iT443KXT10VTv7bDxcEq__RieKYvNEhMvYfqFYTZrKim1MnDr2PVjBYdWslW1VCqfONyU7XIXryj6Aw03HlOWek8Us0U-tw8RDfakS9nY4PGpfC9fB0g-oYmz-f1mS8alDh7Kok1h62Q1WnhcF-7HvmdJZSQUpS91ajvftqWP65rKFKnVziB0HuAiVqCsivIV6vLikU2gphp-ActsOqQ1HOw-8gQCCnsOTKGIDhcdkcc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/entity/629b42b3ad46309d10189284/user/629b0bd088bf25ebdfd03593",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"629b42b3ad46309d10189284",
+								"user",
+								"629b0bd088bf25ebdfd03593"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Comapnt Shraddha",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTc2OTEwNjcsImV4cCI6MTY1NzcxOTg2N30.CxQOWsEyOKsGpNXEVESD9STWFbdasErFwMkdkL0VyjrvVJ7BTfHya8UuyxeBSxuQPJGBm3nDFQKszfibeXQlopK-u3_idoMrOSePXNudC5AfOyQaK4-m0_Co2cBNSagBc8Mn0mvfO0qVwZNO1b1XNIoqvd5vSriythJas5NapFV5P3Lw0cw9GyOXaNaduY2mepyCLC9KTRrNKPes1xPAPn2RbwdD-MTxzESNY1aynvy01P2LSDVIN0YXl8IgYzRXOu3BDHzFuyO252QmsYtYdq5xFH2w3oCejPY33DiyJIAqC4wRQBjmdJVAXGAjBm8wXhqoQDLrU03Rr2R7DWjDF0uznlOc9nVVdsf9SbhiNaJ0fm-QrCTAsMQd9lEFtav618_M8yTIWk0TEOOSbStqnoqfGWygqGETlPMqKYf47X97beOM3RH0V3u2CrC9V_pe9Xx-r2NJHl02Vp2mcdzEKE1YjoSCGLxOwU8fJv9pU9zBpE_DRlpz9ECLt0THHWJ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"userID\":\"62a851383acddadb4f20c6fc\",\n    \"gstin\": \"27AACCS7483E1Z5\",\n    \"companyName\": \"SAP INDIA PRIVATE LIMITED\",\n    \"address\": \"201, Indira Building, Bhandarkar Rd, Shreeman Society, Deccan Gymkhana,\",\n    \"district\": \"Pune\",\n    \"state\": [\"Maharashtra,MH\"],\n    \"pinCode\":\"411004\",\n    \"pan\": \"AAXCS2045P\",\n    \"tan\":\"04AGJOO5113Q1MO\",\n    \"cin\":\"L64200MH2286PLC020470\",\n    \"admin_mobile\":\"9763926686\",\n    \"admin_email\":\"varsha.patil@tech-trail.com\",\n    \"company_email\":\"xyz@sap.com\",\n    \"company_mobile\":\"8574632105\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entity/add-entity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"add-entity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manage company",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bank Account",
+			"item": [
+				{
+					"name": "Add bank",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTc2MTk2NDksImV4cCI6MTY1NzY0ODQ0OX0.YHEE3vb9xZ-nNvNrIfwvDVSF1eNqS8syOvri8U7nJ_JfvFUAfQU0QBX8NWblUIsCAtSpdCkjLF0cNpiiBfKTQWQklFkV9ioxJNYJ7rfRFBF-zhsoRsXW6pvvsNGqgNYNIPKY2EjAVu7i-6DFcWDwqLqfflu2Q5WH83m6eVnOwjWjNdhN3IVq2AXfr_4qPv8EBFIFSBr7PHLNM-xfiX7EgNPcfIsxxQa4difNb25yK7Nh5MnZv2bDWc5j6pUTO_74Z5-t_5wujb3tVcQ3cI3c24URp7x8ba8nZTnvx1BdkQCQrROkRvzkaw6rl63yfYcd8RjB7I6_eYAgmomnYF72m5QF6G1tgplKr1NkY3VlMGvOx5WsHzfOOlWnQG3HEJ1y40F7sgTSx26DSecfwlLzE54gkatpu9YoKZzXeOaBEjAOmATo8HUe62GJypvzdhwpoEcNJnJJUIscCzfWZMi18BOloVSJbdCudqnZLLsFzZX1lCGkoK2kC1yLJFToTvw9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bank_name\":\"BOM\",\n    \"account_no\":\"123456789101112\",\n    \"acc_holder\":\"Varsha\",\n    \"ifsc_code\":\"BKID0008400\",\n    \"account_type\":\"Saving\",\n    \"branch_name\":\"Pune\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/payment/bankaccount/62a8548c21d5976aea2f1787",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"bankaccount",
+								"62a8548c21d5976aea2f1787"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get bank deatils using company id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjliMGJkMDg4YmYyNWViZGZkMDM1OTMiLCJpYXQiOjE2NTQzNDIwMTUsImV4cCI6MTY1NDM3MDgxNX0.BCLZEJSoIFIm55rGS6cMhbBa5GTdu1F4myhOTxr_LhUDvLedO5nQexm4lkKbiFqDtlTNr3VYnRKpce02f9KehsugZnfOC5VyIChyAjF4ihd7NC-THnwnYZh5_gkSPH7QtjXh2L1jIRpKo2R68yThy-LpyA6obddoOxCk8o9O-jk6TXnBjcQJ8q_VNA6Vr2vPNZCQf_pEWn9X8Km6apxOkB8w8Pqgc68NKUiX-NKLjnkuY2S4UFgARgUkmZ-Gijb6bG0JxsatzgTGE7gMTPEfcVNSI0nvmmKTcLH7P2hxVJ9ZEYc0WhXjF1_f866TCBwy7AvGLvzgCt59On1rW7efvLcj6iNZr-7J8yg2mE-3c4g5w2asux5AmGLMkL508WYzLJuViyiu7eI_HgJh5WPpaB0ahUbJq3nkVvLzqt33amgfvuRKwYjyQ36oBNpwLZlritvAmXw3yHiYDQsOpeSFp3TICA0kYI7JPShg1nRyuaVYPHTCa4WNBdPfpDsk5GIr",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/payment//bankaccount/629b42b3ad46309d10189284",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"",
+								"bankaccount",
+								"629b42b3ad46309d10189284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bank details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjliMGJkMDg4YmYyNWViZGZkMDM1OTMiLCJpYXQiOjE2NTQzNDIwMTUsImV4cCI6MTY1NDM3MDgxNX0.BCLZEJSoIFIm55rGS6cMhbBa5GTdu1F4myhOTxr_LhUDvLedO5nQexm4lkKbiFqDtlTNr3VYnRKpce02f9KehsugZnfOC5VyIChyAjF4ihd7NC-THnwnYZh5_gkSPH7QtjXh2L1jIRpKo2R68yThy-LpyA6obddoOxCk8o9O-jk6TXnBjcQJ8q_VNA6Vr2vPNZCQf_pEWn9X8Km6apxOkB8w8Pqgc68NKUiX-NKLjnkuY2S4UFgARgUkmZ-Gijb6bG0JxsatzgTGE7gMTPEfcVNSI0nvmmKTcLH7P2hxVJ9ZEYc0WhXjF1_f866TCBwy7AvGLvzgCt59On1rW7efvLcj6iNZr-7J8yg2mE-3c4g5w2asux5AmGLMkL508WYzLJuViyiu7eI_HgJh5WPpaB0ahUbJq3nkVvLzqt33amgfvuRKwYjyQ36oBNpwLZlritvAmXw3yHiYDQsOpeSFp3TICA0kYI7JPShg1nRyuaVYPHTCa4WNBdPfpDsk5GIr",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/payment/bankaccount/bankaccount",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"bankaccount",
+								"bankaccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete bank account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjliMGJkMDg4YmYyNWViZGZkMDM1OTMiLCJpYXQiOjE2NTQzNDIwMTUsImV4cCI6MTY1NDM3MDgxNX0.BCLZEJSoIFIm55rGS6cMhbBa5GTdu1F4myhOTxr_LhUDvLedO5nQexm4lkKbiFqDtlTNr3VYnRKpce02f9KehsugZnfOC5VyIChyAjF4ihd7NC-THnwnYZh5_gkSPH7QtjXh2L1jIRpKo2R68yThy-LpyA6obddoOxCk8o9O-jk6TXnBjcQJ8q_VNA6Vr2vPNZCQf_pEWn9X8Km6apxOkB8w8Pqgc68NKUiX-NKLjnkuY2S4UFgARgUkmZ-Gijb6bG0JxsatzgTGE7gMTPEfcVNSI0nvmmKTcLH7P2hxVJ9ZEYc0WhXjF1_f866TCBwy7AvGLvzgCt59On1rW7efvLcj6iNZr-7J8yg2mE-3c4g5w2asux5AmGLMkL508WYzLJuViyiu7eI_HgJh5WPpaB0ahUbJq3nkVvLzqt33amgfvuRKwYjyQ36oBNpwLZlritvAmXw3yHiYDQsOpeSFp3TICA0kYI7JPShg1nRyuaVYPHTCa4WNBdPfpDsk5GIr",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/payment/bankaccount/629b4bbf56f1b4909c0a0151",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"bankaccount",
+								"629b4bbf56f1b4909c0a0151"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment service",
+			"item": [
+				{
+					"name": "Send payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoiceid\":\"62a1ce01bcac261c808b37f6\",\n    \"customer_id\":\"62a1abc5540468e838d29fc7\",\n    \"invoiceAmount\":\"10,000.00\",\n    \"buyerid\":\"62a1abc5540468e838d29fc7\",\n    \"outstanding_amount\":\"9,960\",\n    \"order_currency\":\"INR\",\n    \"order_amount\":\"100\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/payment/send-payment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"send-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transction history by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTcwODU2OTUsImV4cCI6MTY1NzExNDQ5NX0.T-DsITmo00XdvJPom2hbrD3qVXZVilSrrJtpWl-RCoa-qa3QV95ZZ1k9yFuAiW2aU4Ki91QLT-0ACAxhr6QowCl8yUFkgTmb85IYtymuvIxD5TO3ZSzPCKbe0SkdcoVzdZEVmSYBimygkmVpAR13FXzRthwd4ptKDFKLXHqNwqkwJYDHg69lR1pbHG_MNQj3ib6b5wbXochQqwe_yVxWYOmxmAaOTwsjwBuYcEOdFgbg_HddhXJ2ewLoAA-r63QdyL-6CeQmD1fZr8hloBKp49LmNVU3oum_gzuNmGZx2fDyN2FFdyZ1AHqkEzKgsPQPA9iPl6rsjbVEIew32h80-_eA2_W0fpNYXRUwT6dnzSvA3G1bjWDjynVaNrL7BdwZ-vnXSrO1JxiAQ5sXHqb-SnjsKuQnMh72ZdexBxkDkrmlGOzQClSFCCN7xBPjQTtkBGiJsy5F1xtu4ie7CJryCX_kCmKmHD9zyWr13d8YnmbYsuhCEe7hSVpZT0IHzoE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_status\":\"hjg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/payment/transctonshistory/62a1abc5540468e838d29fc7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"transctonshistory",
+								"62a1abc5540468e838d29fc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All transctons history",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY5MjAzNjMsImV4cCI6MTY1Njk0OTE2M30.j8cgcm7Qu5L36YunuL1kH6cko6KiszOE7x8BveWawtCHNIl4V_AoGFyCWngC-vZ67UDH2HzXaXhttv8AHUFMmcwb8lmK_GtvU9F0cyH6ll7GzbSP56jKp5FQPd_lKaExseGfYdHnCryLyLb2oUyieydv4pBD1G4qDb99zj-F9Ii45YPMlbWRo-QGpZB9yCtVFEPuZ2dKswDHwv9Wax32RizvWRthCInZPP6ASDoXhQZOU72vZr-bZGW7B7vuaP_FDQhpXAk24Zhz0pIn5Ny6iBH4JyfaAhsi_18Td9jZdC8Z7BpVZy7rL5W3BGdcUiGS4j_F4Dr_kF06GFTIGoOmdg858QTTdbyJ3zsqWkjYnGPCIdLvLNA0lpmutLhBbrRckBTagcLVB7VZAz3OFgELYTPg8T7IeiI60NaAyyIMmAg8g7tk35U6Eem8CJC4zCSbHubehBz6u8KjVWsoFxwQJJJT-snjYqjmet_WRKfhKF-pQaeBAKcQmERCHFZeB4Ze",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/payment/transctonshistory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payment",
+								"transctonshistory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Invoice status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmExYzFhN2FlOWZiYmU5M2NjOTY2OGQiLCJpYXQiOjE2NTQ3NjgzNDUsImV4cCI6MTY1NDc5NzE0NX0.pvDw-VDE-zzyguUIgbUuhHDJFqhi6aIx4JIKUIOFn-aMyZ92iCIRfsX_H4dnDwZBBvEVCcCFTisf7D8nzfoEl0U3VqQL5cDQil-6I-81BdUHnNgzFK8yHbd6TZaHYCzAmdohVf1DYM9u8JZmlfLhmel8ewap6ZwhBdO29UOesumtwjbpa6knbnc3c7YBKdfunezkZ43AezD2WgbmPVTqXX6UJtY1URPgTXnzCEhXe0YGBBQAKEw5QY9ahDxPVT_KC5RFPsv81_UNjd-qPg6nxbc0uW-t0mm65Cdl_twLxLPR5Elu-i-UN8pjPECF-Z6oRITF0jZX-FouJmb5m4yW7ztdeyXfI5Wdt1uHrhKCd2flFJkMOFhChVk46zQ1Eo3WFJLD1iA___BpayPMeIKQKLKT2gkqlH4NQBlqewtuhr9VokbpzsqJhCYrl_9bMpAgmX_2z4sbooEmRH2oi3LrYhE5P3Z2KyeM0O1mC6OapYy2E-1_esAdM840Flz0sWy7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"reason\":\"OK\",\n \"status\":\"Confirmed\",\n \"invoiceID\":\"62a1d43da27dbf5cfc5e47c4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/invoice/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoice",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all invoice",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoiceID\":\"629dea5e92b297d6ee0a256f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/invoice/invoices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoice",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Serach invoice by id and type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjliMGJkMDg4YmYyNWViZGZkMDM1OTMiLCJpYXQiOjE2NTQ1MDU4MTksImV4cCI6MTY1NDUzNDYxOX0.LD0TDN1v2vpv4qGhje_37NSe7EkM5huQA74vjuZiw-_sw6zqbaFe3LGC8P8anz36d4Z8AbQUDA0Oo_dzB7BHx-_3o_mg4uE33z0n-8iFm3xgNkM0af4BCtLzun-Fd3Uje-oPtCZHvKO6v_ou04jcU3IyyUpK1w1lj_NNIjR8gT1_POMCQZfuwNl2IQ856PuloJO7dhmfgioRR363A3BesgRE1Lpi4vICu2uYPhCY_XPwoljoRO7NR7wRyNFz4JH3jrrv9-avAFL6NOO_fqSSfYhQR1UbhBWUlBFD9zMKXOkGtY1-IKwUshPpodu6_YmM329Ik1ukPz0jF2Cbc5L0442HOVINqa-tNtCaRskKAeZQjZxpynhK3LaEwHP1BuxwmfoZZm7ML5UZzxKhoo3yPutua5Zrzu8LHyb0bQ1s2b32YuQoO1_6r8EzNwHJy3kflhW7QLwp5lfCm92okb_HnxhiYdd8Y3jQnIPIEYrgtvaydsN9qCUjB-npQeYO1-r-",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoice/search-invoice/629b42b3ad46309d10189284/buyer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoice",
+								"search-invoice",
+								"629b42b3ad46309d10189284",
+								"buyer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "invoice status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjliMGJkMDg4YmYyNWViZGZkMDM1OTMiLCJpYXQiOjE2NTQ2Nzk3MTgsImV4cCI6MTY1NDcwODUxOH0.Zwx6NIHWj6SzIbMFTrEI6-jXlQ8sRCcZ31AENXKABfqWrM65hJ_BqLXuaw47fmgsDmo7HGG2uqLXOsv8jh_Sxc8yWJ4PH5IgmxwS8HWifJ_6pyc4dFmFdsd6iu2pM9oleIix-AtblIgkP01JK5mWQsg3yC8zmQevDbT_yJB_lugdRslngy9nQCX1nEqlB8Na7EBx5bfdIiqVkdPzRqDxM6VaBhY3IoY3GW-O3KWx6eNruHU9Sb8U4RE0n9LbABKeBF5Inc8KOTjbAHDf9g1HuI_yKuaqfRZ_7VoyYTIeTTl7PFZdyonHiv3n2y-XrAn3v4fqQCN8UCDTn-NT3MdbXkyvq_3Jsrtz-4qtLCpFPau_UMvrDnk1juEmjLmmYf10cTQ2DmwgcMxEFz_o_vLRhk1a4-GNYkTEqVvNXi1p_IpfgByIOzaVXQ1orIF_ei2BQW2h4saZvfpk9ju_Fu9c9qnrBKFSlo0lRoIUolDYs-rg3Mph83xv_O5Y1Bvx1sGr",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoice_status\":\"Confirmed\",\n    \"invoiceID\":\"62beae36c1dcb4c0694cd4cb\"\n}\n \n\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/invoice/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoice",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gen Client ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJ1c2VyVHlwZSI6InN0YW5kYXJkIiwiaWF0IjoxNjU4MTIzNDY1LCJleHAiOjE2NTgxNTIyNjV9.OkbcFCFcciYzQLh0aXKDutVkUItY9iyee5DtlOFWYXmR2NeCEJ_khLVAookcJP8xkiLKY-uQX7eMjWuifNwqgttfrLOHzy2xlLC9NMzRQH-pETguKEOekNSljO96IHtTS2rsiCF7WoKOS1D3kiZq3zfdeCLsrmSNJPm_urMRz8Om8IiEAxLTkRy2QEGb8IEDy16sniyOwup8Y1bkBWFVL2BM3olcLpVat9e1AfPv3R8XLjvsPG6l2lzPorFRmOkGsejNm8DxmHRS9yATQFSlO_PryAknfHkptkiwk37HtJytM8aMfRFHHfh1t34L_L5g7JOA4E6bQsfcedFDeU4nmrIr5q9oxeg8CFit9aYpJ9Dxpnvn2gSLQEPqbW4-yLBT5_DOUnVTKTbODLRbLeZuxYCBXmLEC57hyYWKiOkxk2-SNMiibjGNkBeCNU94FdJcFEIvp_UHxkJw_bIfvrk_F10M7-40GLaaxD4_3HSUao6wIoDZEvRrsuHdJG4MMY2q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userID\":\"62a851383acddadb4f20c6fc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/gen-client-key",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"gen-client-key"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UAT invoice upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoice_amount\": \"10000\",\n    \"outstnding_amount\":\"10000\",\n    \"invoice_date\": \"05/08/2022\",\n    \"invoice_due_date\":\"17/09/2022\",\n    \"invoice_number\": \"D0021\",\n    \"invoice_type\": \"IN\",\n    \"buyerGST\": \"20AAACH7409R1ZF\",\n    \"sellerGST\": \"27AAACH7409R1Z1\",\n    \"bill_details\": {\n        \"gst_summary\": {\n            \"cgst\": \"615.93\",\n            \"sgst\": \"615.93\",\n            \"igst\": \"0.00\",\n            \"total_tax\": \"1231.86\"\n        },\n        \"discount_summary\": {\n            \"cash_discount\": \"360.20-\",\n            \"special_discount\": \"0.00\",\n            \"in_bill_discount\": \"0.00\",\n            \"total_discount\": \"360.20-\"\n        },\n        \"tax_summary\": {\n            \"tcs_based_value\": \"8075.66\",\n            \"tcs_tax_value\": \"0.00\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://uat.xuriti.app/api/invoice/upload-invoice-manual",
+							"protocol": "https",
+							"host": [
+								"uat",
+								"xuriti",
+								"app"
+							],
+							"path": [
+								"api",
+								"invoice",
+								"upload-invoice-manual"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoice_amount\": \"10000\",\n    \"invoice_date\": \"06/08/2022\",\n    \"invoice_due_date\": \"07/08/2022\",\n    \"invoice_number\": \"AM008\",\n    \"invoice_type\": \"IN\",\n    \"buyerGST\": \"08AAACA5603Q1ZK\",\n    \"sellerGST\": \"27AABCB1518L1ZZ\",\n    \"bill_details\": {\n        \"gst_summary\": {\n            \"cgst\": \"615.93\",\n            \"sgst\": \"615.93\",\n            \"igst\": \"0.00\",\n            \"total_tax\": \"1231.86\"\n        },\n        \"discount_summary\": {\n            \"cash_discount\": \"360.20-\",\n            \"special_discount\": \"0.00\",\n            \"in_bill_discount\": \"0.00\",\n            \"total_discount\": \"360.20-\"\n        },\n        \"tax_summary\": {\n            \"tcs_based_value\": \"8075.66\",\n            \"tcs_tax_value\": \"0.00\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/invoice/upload-invoice-manual",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoice",
+								"upload-invoice-manual"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoice upload DEV",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJ1c2VyVHlwZSI6InN0YW5kYXJkIiwiaWF0IjoxNjU4MTIzNDY1LCJleHAiOjE2NTgxNTIyNjV9.OkbcFCFcciYzQLh0aXKDutVkUItY9iyee5DtlOFWYXmR2NeCEJ_khLVAookcJP8xkiLKY-uQX7eMjWuifNwqgttfrLOHzy2xlLC9NMzRQH-pETguKEOekNSljO96IHtTS2rsiCF7WoKOS1D3kiZq3zfdeCLsrmSNJPm_urMRz8Om8IiEAxLTkRy2QEGb8IEDy16sniyOwup8Y1bkBWFVL2BM3olcLpVat9e1AfPv3R8XLjvsPG6l2lzPorFRmOkGsejNm8DxmHRS9yATQFSlO_PryAknfHkptkiwk37HtJytM8aMfRFHHfh1t34L_L5g7JOA4E6bQsfcedFDeU4nmrIr5q9oxeg8CFit9aYpJ9Dxpnvn2gSLQEPqbW4-yLBT5_DOUnVTKTbODLRbLeZuxYCBXmLEC57hyYWKiOkxk2-SNMiibjGNkBeCNU94FdJcFEIvp_UHxkJw_bIfvrk_F10M7-40GLaaxD4_3HSUao6wIoDZEvRrsuHdJG4MMY2q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-key",
+								"value": "eyJhbGciOiJSUzI1NiJ9.YmZlMWQ1NTAtMTlkMC00OGYwLWE3ZTAtZGY1MWQ0YmQ3ZWEx.lBFS4xMO9StZ-ct0xhw9BN0dR4vcrr6eg36ToG046CqWm7Csq5fufuBujDT_glGJecACrq69xqbtEgRClIyYpglobP5oblDDMYQyeYvfDYMJvZW1fmt--JS0KmmLN-GPh4b0BUwSxGNG1L1ed5zvXgW3QOnHxZ_vNOV4R_n9MLw_4FKifh2tUwf4ZMfzPrVVLzn4Y9FaZ_PjYZSprgxS2wxLZVductAwWSlynOTGy4hVdYOwAAzYcAUC-Dl4m6XGqp9jSBpFB9UHj3aptX67EAzfqfya7BxfQP-Co-ssmSlZRCtBmTxpz3JCtmB24cw_uChsUnzWM5RgoyzVYYY0N-wlogRwye2gcfEDbh6axQdQRPZkExcZuMEZECViwYYTpb70c4Ame1JgAxh_alZSmrN63rJeGJw0zz-JBERo9pUUwTBqvrGZ_ZSY7iTcxi-Ct0r_XaKEcODKgCsun9TKD4Z-lw0ujGGYej38UgwGpEsEjvNkfaIa44ve_6Ytlkr2",
+								"type": "default"
+							},
+							{
+								"key": "x-user-id",
+								"value": "62a851383acddadb4f20c6fc",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoice_amount\": \"10000\",\n    \"invoice_date\": \"08/07/2022\",\n    \"invoice_number\": \"IN0043\",\n    \"invoice_type\": \"IN\",\n    \"buyerGST\": \"07AAACH0812J1ZZ\",\n    \"sellerGST\": \"27AABCB1518L1ZZ\",\n    \"bill_details\": {\n        \"gst_summary\": {\n            \"cgst\": \"615.93\",\n            \"sgst\": \"615.93\",\n            \"igst\": \"0.00\",\n            \"total_tax\": \"1231.86\"\n        },\n        \"discount_summary\": {\n            \"cash_discount\": \"360.20-\",\n            \"special_discount\": \"0.00\",\n            \"in_bill_discount\": \"0.00\",\n            \"total_discount\": \"360.20-\"\n        },\n        \"tax_summary\": {\n            \"tcs_based_value\": \"8075.66\",\n            \"tcs_tax_value\": \"0.00\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/invoice/upload-invoice-manual",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoice",
+								"upload-invoice-manual"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User service",
+			"item": [
+				{
+					"name": "Add Staff",
+					"item": [
+						{
+							"name": "Add staff",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmExYWQzYWY0OTdlZjk3ZmVjZjhlNzQiLCJpYXQiOjE2NTU3OTYyMTMsImV4cCI6MTY1NTgyNTAxM30.WezChHdDzVvh9QoFW9e9TRjCtZ4Xz8yYUx8bkMbzBysgXoJwUOXMt4hW3Xn7_ThnXNQTK0CAsenYEEWPiWYlWxAfCDiXgtlf8nZfXIiF1AsfA8vXs0RhO3TvQtkTZKmb5UexkZ44lXZ9ocYCUsg5rqtObC77rzRYcLUUPkeMeoDFuDnqQVcJeoFjjwvz8j5WPssyfSXY0N8kjgkr1dolOXqvtxFxzPRHlCPWrv9DnFV9mCE1gSt634fQDpOGY2V-3JzFDfbYHpr4NcikUhOe3YFUSw2PkMeNeLRuoXiALrZK1GfceOMNosbgD6N_vJducHQGkmVu_QDZJF8YkntuZ4xP_Igc8Sw06-1MOD4_bMIwo4pe2EpzbXDWeawdNPcf6IVOTn4OeW9q6NZZR8KkdAH8qPTa5-ktn41n-qtjimhoVSKlJrr9xhWYh-XwuaveT32xnbuN5-yvOtrMTvJiLZxJNxmeiNj5OfsY3Dou3gyjYcA9Y7wmzaUMvBDw693O",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n         \n          \"email\":\"vp@xuriti.com\",\n          \"mobileNumber\":\"1234567892\",\n          \"firstName\": \"Varshasp\",\n          \"lastName\": \"Patil\",\n          \"userRole\": \"xuritiAdmin\",\n          \"registeredBy\":\"62a1ad3af497ef97fecf8e74\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/user?userRole=xuritiAdmin",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"user"
+									],
+									"query": [
+										{
+											"key": "userRole",
+											"value": "xuritiAdmin"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTc2MDc0ODQsImV4cCI6MTY1NzYzNjI4NH0.PQe0ivJMa2VtquWSNDT3TBdK89i0wu8dzb0qz59YvJ96M1O0et77RZdTXQaioKbnbtv5ZPzapJ6CHomseVRBnZfq5zPAzfbrlMvTNSWlZS9jTzEcUe2Fad6w6OtuBBHo681aSUi_NhaqZvuvQ-kQvIQ_hA6RNi3ohQVJJvvD4jNziv86M6Hs3AkKIKViND2nEfaCiWMnky_O5L_Ubstf34GnOTL8R1LHqRRg3y7fzFRmsi5yW0IJIbL6I5cHDvyL7FK1wyVE2v4gJYDgXvvYIFV3VaTtWvx7eHHVm4ffyIz48jueXFg1P_qAP8lpB6zIYk9zkHy551A23DoxNXq87uqvae-qmCbZPPUSImP6ObP3W6mDG8EeCTIwKPLhRW0UUoOF-CEAJ4R_gfO99nZs4SLckXJgTyOT4TgmfUSxN28LxZBvey0ql1IU75lFtlFzaJnYWQhNs0t2V83hK7uWBlN4ZLq68YznYQoC8NlDdhvKKdTAYCnc50XOCykVh-Yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobileNumber\":\"112244355\",\n    \"userRole\":\"98765\",\n    \"firstName\":\"Miya\",\n    \"lastName\":\"Roy\",\n    \"email\":\"Miya12@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/adduser/62a8548c21d5976aea2f1787",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"adduser",
+								"62a8548c21d5976aea2f1787"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/user/629b42b3ad46309d10189284",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"user",
+								"629b42b3ad46309d10189284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By uaer id and cid using",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/getuser/629b0bd088bf25ebdfd03593/company/629b42b3ad46309d10189284",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getuser",
+								"629b0bd088bf25ebdfd03593",
+								"company",
+								"629b42b3ad46309d10189284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastName\":\"sample\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/user/629dc7369161b01271ce28cf/company/629b42b3ad46309d10189284",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"user",
+								"629dc7369161b01271ce28cf",
+								"company",
+								"629b42b3ad46309d10189284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/user/629dd78d33e85811a35c33ee/company/629b42b3ad46309d10189284",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"user",
+								"629dd78d33e85811a35c33ee",
+								"company",
+								"629b42b3ad46309d10189284"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount Copy",
+			"item": [
+				{
+					"name": "add plan",
+					"item": [
+						{
+							"name": "http://localhost:5002/entities/6279443f060d05294de78f38/credit-plans",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"content-length": true,
+									"host": true,
+									"user-agent": true,
+									"accept": true,
+									"accept-encoding": true,
+									"connection": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjkwYTNmMGM4NTFkNzA0NzkyZWZiZjciLCJpYXQiOjE2NTM4OTQ4NTgsImV4cCI6MTY1MzkyMzY1OH0.BwhFUy5vlLbvCKB4ZoSA_S50_HL8EEL2D93sawj8FiV3fPOMSEp-xkDDslo7PmREIi_ol-OGVt6mOmAvlLLPGgrYXV-j__MVLxvJr8FIEVUnao4nUXZ3-oECoSIPrZZ4CzF1F-T8mvRtXQG5vVDNjx2YAyEoMy108W7rcxtgr8ktfYg7up-d86u0PzZwOEclSL4hfMFm75j7J980SBl_psDfhKmnmnxJkFfW1zEOXeiyKNmYza3eQCfuNP71QaP5VR2ek0VzdQRRi8FeATyaFDEVlpADMl_E4V00lLgcha5xcVTBhkvPRqMkP99UYxAjh4y1BRmMtCZcNNB5lEaj4ndO7xbZ5XDTavSU0TqMqnxsc4ANRkVY7ONhCpCGuFYg0fFvNsFhK0tED2Q8OLnd77K_sp1p99Q2ViHCh6B-Gxvlnu4TiTB2_IcXn8P7iUg-P1L3Tf3KViM0WwJMTb4AKX2O9Tjo0VgM9VR3KZQQ46ATPROFj4ytc7JLVbYnL2PE",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"plan_name\":\"Plan1\", \n    \"credit_period\":30, \n     \"default_plan\": true,\n    \"payment_interval\": 3,\n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 10,\n      \"discount\":5\n    \n    },{\n      \"slab\":2,\n      \"from\": 11,\n      \"to\": 20,\n      \"discount\":3\n    \n    },{\n      \"slab\":3,\n      \"from\": 20,\n      \"to\": 30,\n      \"discount\":2\n    \n    }]\n   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/entity/62a8548c21d5976aea2f1787/credit-plans",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"entity",
+										"62a8548c21d5976aea2f1787",
+										"credit-plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJ1c2VyVHlwZSI6IkFkbWluIiwiaWF0IjoxNjU3NzczOTE5LCJleHAiOjE2NTc4MDI3MTl9.ZiPAWn0Gr1j7Vu-hjWqIt6GCYd3F02UNJDALdBBaLSWUWqqSufQvBgaydlYTMKMuQSwFmhRRUnodgYpif9DGbCI-D-5KLlwBSveIqaE21mfnbQviub57hx059Z0c_EKDVNMWB7ceRBMvuyNBfl_UxIIPZFKeTkxEgmTIG4Ge79wGD_nnClcdMRdMXYdgO65lUH10nynwwFZ3yvuY-XoHqHa-XRw9mOIKSh8Bhk0NPUw25Ig14NmfD4bZeq3HgMvNlxzA1zMNrwksGbZQAN_hJGSuNzxJ8o2zXlM9htg0XwKjpg4TDjNQwEB9HfniwfVvuMQSDjuPo2tEb1ph6ZTWKU4t5-6-2OhJyfAumWQ-vZcFeKRDe3Dcls-SkhDIlA5QcIbeWLhJJBduPpsbTXXUrzGVltblATP4t3dNYrk13D4c49x9HV7-jYCAIGk3LBs61b4pOvPyfqvLLPXPeFRysMG_OJAhW_ThHt7nMMzAuFu8xHbUxfQAKl14Iqh8Z3do",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"plan_name\":\"Plan3\", \n    \"credit_period\":30, \n     \"default_plan\": true,\n    \"payment_interval\": 2,\n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 10,\n      \"discount\":5\n    \n    },{\n      \"slab\":2,\n      \"from\": 11,\n      \"to\": 20,\n      \"discount\":3\n    \n    },{\n      \"slab\":3,\n      \"from\": 20,\n      \"to\": 30,\n      \"discount\":2\n    \n    }]\n   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/entity/62a8548c21d5976aea2f1787/credit-plans",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"entity",
+										"62a8548c21d5976aea2f1787",
+										"credit-plans"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "edit plan",
+					"item": [
+						{
+							"name": "http://localhost:5002/entities/6252b5cb7832324a43edbce8/credit-plans/6278df98c82dca74b38a15ae",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"plan_name\":\"testing plan 2\", \n    \"credit_period\":30, \n    \"default_plan\":true,\n    \"payment_interval\":\"2\",\n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 15,\n      \"discount\":11\n    \n    },{\n      \"slab\":3,\n      \"from\": 16,\n      \"to\": 30,\n      \"discount\":20\n    \n    }]\n   \n}\n   \n   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/entity/62838cc0dd3fee1fb47bfe80/credit-plans/62975f5274257aa75e4e2bfc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"62838cc0dd3fee1fb47bfe80",
+										"credit-plans",
+										"62975f5274257aa75e4e2bfc"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "delete plan",
+					"item": [
+						{
+							"name": "http://localhost:5002/entity/6252b5cb7832324a43edbce8/credit-plans?plan_id=6274e0d5f6674d3859bdc266",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mobileNumber\": 7972512892,\n    \"otp\": 7725\n\n  \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/entity/628cb6c7b7af000c8a58c26b/credit-plans/6299f02e6e323a6350804c3e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"628cb6c7b7af000c8a58c26b",
+										"credit-plans",
+										"6299f02e6e323a6350804c3e"
+									],
+									"query": [
+										{
+											"key": "plan_id",
+											"value": "6274e0d5f6674d3859bdc266",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "calculate dicount",
+					"item": [
+						{
+							"name": "http://localhost:5002/entity/interest?buyer=62629d3ffb29fcec6c146b16",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"order_status\":\"change\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/entity/628219b4d3adb18ff1c2d74d/invoices/629b46c376b05d500c83cc66/discounts?amount=1001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"628219b4d3adb18ff1c2d74d",
+										"invoices",
+										"629b46c376b05d500c83cc66",
+										"discounts"
+									],
+									"query": [
+										{
+											"key": "amount",
+											"value": "1001"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Interest",
+					"item": [
+						{
+							"name": "http://localhost/invoice/interest?buyer=62629d3ffb29fcec6c146b16",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"days\":3,\n    \"amount\":10000\n   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/invoice/interest?buyer=62a5a11b5257680712a5618c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"invoice",
+										"interest"
+									],
+									"query": [
+										{
+											"key": "buyer",
+											"value": "62a5a11b5257680712a5618c"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get plans",
+					"item": [
+						{
+							"name": "http://localhost:5002/entity/6252b5cb7832324a43edbce8/credit-plans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MjhmMDFiMDVlMDBiNWI4ZjZjODg1MDIiLCJpYXQiOjE2NTM1NDYyODksImV4cCI6MTY1MzU3NTA4OX0.Bh3zniWRIud3M8gLPi0_GfnLDmZpsI2HPnslwEU3srSnqzW-de-mDzHkR_5pcEdL1MBoCCHUwRIaCozdd5sHu6FCtXrET4XIveXUflzLaEM_rsR3kqBgN52AvYkMfwKCm0zrAry_kIING-4M6rFrW9MhsIloVRrtY-coLJk6ZNyv2DD8c4lo5bVb-U0G9XlhEvROsIpwqou0-e6q0yjIHu-KpxuKsVhp6cGU7VhArrdkfDhARCpgLQZBBpcDLuKpzYxell1kLOBYpsu2flG3yGXFs6oY5iKEBA73Z0CSBtfluHgMYwZVyl-qUb1_nChtS1dDpA-4dNaBcifEYKifNzHAeTYGQRd-z9TSUwxy3CO-lZbwEwxAHqPjIbI8aBXoqS0UaBnbA0elESWl2vSXCsv031u260SSGJoc92BoszrrZQmx8ciSa8Q4u7MeBPmNXvKfxGxh9vN7pZzxcmuSiWbvrSKox-0PB0fRKw69HADc71rtAUCtr4xGTYc9xff1",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5002/entity/628cb6c7b7af000c8a58c26b/credit-plans",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"628cb6c7b7af000c8a58c26b",
+										"credit-plans"
+									],
+									"query": [
+										{
+											"key": "plan_id",
+											"value": "62988d95133cde2ed3343b84",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "map plan",
+					"item": [
+						{
+							"name": "http://localhost:5002/entities/6252b5cb7832324a43edbce8/credit-plans-map",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY5MzQ5NDEsImV4cCI6MTY1Njk2Mzc0MX0.BdVUtKzYLrKLkB2vXKeJiXhcA2d1beDzGtIFcPzIyCSit4cpvbixIBjFgeVLoU_-HVri3H1ceayiuqGJuSlQEYAJKkFqbP_PTtDdVoAt69zRIGcHSRrc3EmVMBQobCPLaRQoB4vhLpxKY2chKKz7KLcp1_eaCdAaN7HUNSBitTjZMh7tPES6MMLQxzC1ZioTBMJ5b7TbC6FOnZ6n89RkKRgHJniAOPbj7YobCuMDu74wajoxLsjWCIc-WJZL5I-lX45hz4DgkbJx9WIx93TcDD9sdaLcxqSmHPuSlCgMN_O3op78uu7BIM7eF6NlJ4aUYPyKvyB0KU_H315VeZXnlqBTFkCdXacW4Nxv4kX-UlOKXWcdYDRcxm57xhm9bhcz9wDGZzYPFHV4OrCQ3ddff0E70ch7g5bADJbyHt0otyKx4WLopWNEcfyzQ_ShT4bpNwy2hbLzX3FhR3C_I6j7ndZGnvZyvSg5foEbjS4MSsUnlOfDYj7Qo30G60DiOaFn",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"credit_planid\":\"62baee9109c6a1c428e16461\",    \n     \"buyers\": [\n         {\"buyer_id\":\"62a851383acddadb4f20c6fc \"}\n         \n        \n     ]\n  \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/entity/62a8604e6348f177a48cf0bb/credit-plans-map",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"entity",
+										"62a8604e6348f177a48cf0bb",
+										"credit-plans-map"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Default plan",
+					"item": [
+						{
+							"name": "http://localhost:5002/entity/6279165ecfce29b8a2ccd33b/credit-plans/627cd1b66dc3e40e8a02719b",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n\n{\n    \"buyerid\": \"6279443f060d05294de78f38\",\n\"customer_details\": {\"customer_id\": \"6279443f060d05294de78f38\", \"customer_email\": \"abhishek.parihar@xuriti.com\",\"customer_phone\": 6294923461},\n\"interest\": 0,\n\"invoiceAmount\": \"47925\",\n\"invoiceid\": \"627be0e989a12d94799dbabb\",\n\"order_amount\": 35000,\n\"order_currency\": \"INR\",\n\"outstanding_amount\": 35000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/entity/628cb6c7b7af000c8a58c26b/credit-plans/6299fe916b3e922610d0f876",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"628cb6c7b7af000c8a58c26b",
+										"credit-plans",
+										"6299fe916b3e922610d0f876"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://192.168.0.130:5002/entity/entities",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5002/entity/entities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"entities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:5003/payment/send-payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n\n{\n    \"buyerid\": \"6279443f060d05294de78f38\",\n\"customer_details\": {\"customer_id\": \"6279443f060d05294de78f38\", \"customer_email\": \"abhishek.parihar@xuriti.com\",\"customer_phone\": 6294923461},\n\"interest\": 0,\n\"invoiceAmount\": \"47925\",\n\"invoiceid\": \"627be0e989a12d94799dbabb\",\n\"order_amount\": 35000,\n\"order_currency\": \"INR\",\n\"outstanding_amount\": 35000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5003/payment/send-payment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5003",
+									"path": [
+										"payment",
+										"send-payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:5004/user/user/6279165ecfce29b8a2ccd33b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/user/user/6279165ecfce29b8a2ccd33b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"user",
+										"user",
+										"6279165ecfce29b8a2ccd33b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get_single plan map",
+					"item": [
+						{
+							"name": "http://192.168.0.130:5002/entity/credit-plans/?plan_id=627cd1b66dc3e40e8a02719c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY5MTA2NzgsImV4cCI6MTY1NjkzOTQ3OH0.Wf3pID2WyQfhvDD64cvk_3gLCThuMUwrxTBNLu6edTnrC-EJMbZhxMleYA0py3VY-cmkqS0y3AXiFaH6ld2F-widFIaGwvK6aCqcJ6-HOG6Vw2l7AdxxSI610Zn7v9ffVrS2fCu1ihKIZBkndtvuobf0Bg5XcpDQ_piUmN7cafy7NQIozUOwM6hwlInubYt23yv1EkSARh5QMQlliMApcEMWoWzA4WV-gRgVn0MPi7Wlfurv76cocHHTJ81WDeJKnZJChqMBvnbM78gd-x-LWgLQej6dqSrpRKSEodd71CnedzmlV7WrKljWcDdGhgpdzITWrxITyE02c-Y74Xb48TC0cveueXl3L7QhXsRmkO2H-f3BzpI6Ma-olwQQeshqDSx8rNsw41TVYvPCs_nSsnb8nqNFHW4mF1C_-7yJW1XjXZh9pj2JSYJgf5sOTn1mmdDSrjdscDi_8PsZZOKSbdorWGqhv3ylWklY5USH3NtOZ-HZACXp33WRlJS9_TCQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mobileNumber\": 7972512892,\n    \"otp\": 7725\n\n  \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/entity/62a8548c21d5976aea2f1787/credit-plans/62b9990cf2ddc144cdf56802",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"entity",
+										"62a8548c21d5976aea2f1787",
+										"credit-plans",
+										"62b9990cf2ddc144cdf56802"
+									],
+									"query": [
+										{
+											"key": "plan_id",
+											"value": "6285d930673e5d291633487f",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "un map plan",
+					"item": [
+						{
+							"name": "http://localhost:5002/entity/6279165ecfce29b8a2ccd33b/credit-plans",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5002/entity/6279165ecfce29b8a2ccd33b/credit-plans/6299f02e6e323a6350804c3e/buyers/628dda498d8f0d6ac71f8234",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"6279165ecfce29b8a2ccd33b",
+										"credit-plans",
+										"6299f02e6e323a6350804c3e",
+										"buyers",
+										"628dda498d8f0d6ac71f8234"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "http://localhost:5002/entity/628cb6c7b7af000c8a58c26b/credit-plans",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plan_name\":\"testing\", \n    \"credit_period\":60, \n                           \n     \"payment_interval\": 4,\n   \n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 15,\n      \"discount\":5\n    \n    },{\n      \"slab\":2,\n      \"from\": 16,\n      \"to\": 30,\n      \"discount\":4\n    \n    },{\n      \"slab\":3,\n      \"from\": 31,\n      \"to\": 45,\n      \"discount\":3\n    \n    },{\n      \"slab\":4,\n      \"from\": 41,\n      \"to\": 60,\n      \"discount\":2\n    \n    }]\n   \n}\n   \n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/entity/628cb6c7b7af000c8a58c26b/credit-plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"entity",
+								"628cb6c7b7af000c8a58c26b",
+								"credit-plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmE4NTEzODNhY2RkYWRiNGYyMGM2ZmMiLCJpYXQiOjE2NTY0MDgyMjIsImV4cCI6MTY1NjQzNzAyMn0.gAf7pl0Fw08r8K8SCchT2or97UJ_BHRHUvFfokzjNZARtxaeKYlpoqYExnXCK8MVXrPmzBZvgMoXragJN5DyF2QAT2YqMrYS-Ozouz0B_HXjYTekgGfs601c9ssY517jN3s7zkMgmzDhid024V5DTt2-cKpOd7CdWVh358Dsob5h7wWeD9PRbfMdawMdmKm0h9Xgu1qkI3E4xd-9xxmoxR0u4XMfrc1Qpp_vtYZDdlHI8pPWG9pNTOiLzp_049XH3bn01IojYFUqzeo77Al6J54GpWf1lJYo9cXOKT2F-mEF5V0dMka6O47peM0LJsNFrfA0qwCnnlNr_-9AMbgVDeD56C5gy55bfP2qEHsvFdQJBCaiWq5FX_mirlC-NRPYFZkM3BjQ6aab8bOUCJiWjAbliMEbM0nBtlxQ_rQG7Q5KM8kk7ATErOXzvDDLRCnc7CvOXF8_qL5W3505HxPEhw1WMIGtOk8V33XVIzHUscztfjKyNmMBcUC8yMxRiXu7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"plan_name\":\"Force motor plan\", \n    \"credit_period\":30, \n     \"default_plan\": true,\n    \"payment_interval\": 3,\n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 10,\n      \"discount\":5\n    \n    },{\n      \"slab\":2,\n      \"from\": 11,\n      \"to\": 20,\n      \"discount\":3\n    \n    },{\n      \"slab\":3,\n      \"from\": 20,\n      \"to\": 30,\n      \"discount\":2\n    \n    }]\n   \n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entity/62a8548c21d5976aea2f1787/credit-plans",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"62a8548c21d5976aea2f1787",
+								"credit-plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mapping Credit Plan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmExYWQzYWY0OTdlZjk3ZmVjZjhlNzQiLCJpYXQiOjE2NTcxNzEzNjIsImV4cCI6MTY1NzIwMDE2Mn0.vYQlKpV9clrXFxMAMUYf4zSBTspGQQZQ2MmYTWtbp_MbJ18tHxBtMSZwixcgelZl1B7b9rz5kBoGRU1cxWF0pFQ2yG6-CGcBDabXqEYaX96CEaqqwTk4Wmy2SPPt9X9ZTBxa0YK3nJJjL9vCU0kTbM_kRhM04MvFlNwuh15nTQvbjQVIw9Pac6T_iXi-PJnWPRuR8Shori9EH7249O3CrxgFkeZByQsdQYXqvvzj0-eerzpmLrVrRbc9Hq8xnMHy_1rzTkGGs8-14PxcaBIrUGc7Uq75GW-Wq6JB_iDT_GQqvoxbZ3eIADwkbI2jdGywigk1P94uj2im8n_2EYxlVt4sxk4Cv6mEamykNQ_wKPyUatWMBSMk9BOuVBn-zyw8axQN1obYf5UMAeeyEoiuPqmP-Wbh2mbCurUvdDyZD8dYafjsRIT_8rmOXYr2puA9Va1SFVWXHrpzY9lntJD-gmMclZO4WZYtmUKqevM0KxWvINtldF18wX2_Hj7mUXox",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"credit_planid\":\"62baee9109c6a1c428e16461\",    \n     \"buyers\": [\n         {\"buyer_id\":\"62a851383acddadb4f20c6fc \"}\n     ]\n  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entity/62a8548c21d5976aea2f1787/credit-plans-map",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entity",
+								"62a8548c21d5976aea2f1787",
+								"credit-plans-map"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MIS Copy",
+			"item": [
+				{
+					"name": "company",
+					"item": [
+						{
+							"name": "http://localhost:5008/ledger/mis/companyonborded",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"plan_name\":\"Xuriti_Plan\", \n    \"credit_period\":60, \n     \"default_plan\": true,\n     \"payment_interval\": 4,\n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 15,\n      \"discount\":10\n    \n    },{\n      \"slab\":2,\n      \"from\": 16,\n      \"to\": 30,\n      \"discount\":4\n    \n    },{\n      \"slab\":3,\n      \"from\": 31,\n      \"to\": 45,\n      \"discount\":7\n    \n    },{\n      \"slab\":4,\n      \"from\": 41,\n      \"to\": 60,\n      \"discount\":5\n    \n    }]\n   \n}\n   \n   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5009/ledger/mis/companies/buyer_pending_registration?status=Pending",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5009",
+									"path": [
+										"ledger",
+										"mis",
+										"companies",
+										"buyer_pending_registration"
+									],
+									"query": [
+										{
+											"key": "gstin",
+											"value": "O8AKOCX6349P1ZL",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "Pending"
+										},
+										{
+											"key": "percentage ",
+											"value": "80",
+											"disabled": true
+										},
+										{
+											"key": "days",
+											"value": "0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "invoice",
+					"item": [
+						{
+							"name": "http://localhost:5008/ledger/mis/companiesupdated",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\":\"Approved\",\n    \"userid\":\"62a7034bc6fa7f34f6ef524e\",\n    \"companyid\":\"62a19d10392f9b2499d6b015\",\n    \"comment\":\"nothing\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://dev.xuriti.app/api/ledger/mis/invoices/invoicesuploaded?seller_id=62b2bb0faa4471eb49056038&days=0&status=Confirmed",
+									"protocol": "https",
+									"host": [
+										"dev",
+										"xuriti",
+										"app"
+									],
+									"path": [
+										"api",
+										"ledger",
+										"mis",
+										"invoices",
+										"invoicesuploaded"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2022-05-08",
+											"disabled": true
+										},
+										{
+											"key": "to",
+											"value": "2022-06-20",
+											"disabled": true
+										},
+										{
+											"key": "seller_gst",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "buyer_gst",
+											"value": "0QX0CC9424D1Z2",
+											"disabled": true
+										},
+										{
+											"key": "seller_id",
+											"value": "62b2bb0faa4471eb49056038"
+										},
+										{
+											"key": "buyer_id",
+											"value": "62a19d10392f9b2499d6b015",
+											"disabled": true
+										},
+										{
+											"key": "days",
+											"value": "0"
+										},
+										{
+											"key": "status",
+											"value": "Confirmed"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:5002/entity/62a19b72392f9b2499d6b00f/credit-plans",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"plan_name\":\"Xuriti_Plan\", \n    \"credit_period\":60, \n     \"default_plan\": true,\n     \"payment_interval\": 4,\n    \"discount_slabs\":[ {\n      \"slab\":1,\n      \"from\": 0,\n      \"to\": 15,\n      \"discount\":10\n    \n    },{\n      \"slab\":2,\n      \"from\": 16,\n      \"to\": 30,\n      \"discount\":4\n    \n    },{\n      \"slab\":3,\n      \"from\": 31,\n      \"to\": 45,\n      \"discount\":7\n    \n    },{\n      \"slab\":4,\n      \"from\": 41,\n      \"to\": 60,\n      \"discount\":5\n    \n    }]\n   \n}\n   \n   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/entity/62a19b72392f9b2499d6b00f/credit-plans",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"entity",
+										"62a19b72392f9b2499d6b00f",
+										"credit-plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https//dev.xuriti.app/api/user/userlist?userRole=",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https/dev.xuriti.app/api/user/userlist?userRole=",
+									"host": [
+										"https"
+									],
+									"path": [
+										"dev.xuriti.app",
+										"api",
+										"user",
+										"userlist"
+									],
+									"query": [
+										{
+											"key": "userRole",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "newcompany",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXIiOnRydWUsInVzZXIiOiI2MmMzZmU1NDcyMTJiNmM4NmQ3YTljNzMiLCJpYXQiOjE2NTcwMTg5MzgsImV4cCI6MTY1NzA0NzczOH0.sdhua2RHsOiJ5q1Bwn_V5zBJbHCUxunuJW_y4A5_cUX_TqZtWPoKLaan8NaEPQ0Fh4-wsRfhuWjoYoTpiXpP-o4m2mut4zuDSLuvQOQb9ypI6ifmOxvpuaUh9jsDskckcHBs0kdMWVwAx8ay5N-aH3ul6WqwHvMV4I0U_hz5nGIKQGWNZhhZXLEBYIJ9b7YFyuU7INb7VBMPsaW_qQxAnIVC4pmSp1TScVsBu13kJldBtqvaKEOWMhh8hptSJNGHESFFkmCP0NUXcz0dZfA02DO_nrsV6Y4p1Ezu97me5KSLDgVKQXS3jcQT4I68nNUfWI-nBZvNuK8VGYvFYNRBV9Qia_gqy__5tSCvejunMsON7BsUGWnYG3hJHSKOkvs34NvavAIVZXacu97A7dgTBFuaYiqasEKo1bgORaMSzYAVUpgeYCKer-BAlyNQGKmBmgPlOTrAK9tj8KMPj9wUkDBsD8kS_B5rIOrflr6hyetSnK-tTJZmJLO9vPWIKqnr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"userID\":\"62c4055cd8200d1fccc01af1\",\n    \"gstin\": \"29AASFB0640H1ZD\",\n    \"companyName\":\"BANGALORE COMPANY \",\n    \"address\": \"1,Vittal Mallya Rd, KG Halli, Shanthala Nagar, Sampangi Rama Nagar, Bangalore Urban, Bengaluru,\",\n    \"district\": \"BANGALORE\",\n    \"state\": [\"Karnataka\"],\n    \"pinCode\":\"560001\",\n    \"pan\": \"AASFB0640H\",\n    \"tan\":\"04AGJOO5203Q1MO\",\n    \"cin\":\"L64200MH1986PLC020470\",\n    \"admin_mobile\":\"7058242253\",\n    \"admin_email\":\"shradhakore801@gmail.com\",\n    \"company_email\":\"cipla.secretarial@cipla.com\",\n    \"company_mobile\":\"9590386428\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/entity/add-entity",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"entity",
+						"add-entity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
